@@ -29,3 +29,26 @@ slapcat -n 1 -l /backup/ldap_backup.ldif
 **Dezavantajlar:**
 - Büyük veritabanlarında yavaş çalışabilir.
 - Canlı veritabanında bazı dinamik veriler dışlanabilir.
+
+## b) Fiziksel Yedekleme (Database File Copy / Binary)
+
+**Açıklama:**  
+LDAP’in kullandığı veritabanı dosyaları (ör. BerkeleyDB veya LMDB) doğrudan kopyalanır. Symas OpenLDAP için LMDB backend’de `mdb_copy` kullanımı önerilir.
+
+**Yöntem:**
+1. Servisi durdur
+2. DB dosyalarını kopyala
+3. Servisi başlat
+
+**LMDB Örnek Komut:**
+```bash
+mdb_copy /var/symas/openldap-data/ /backup/ldap_backup/
+```
+
+**Avantajlar:**
+1. Çok hızlıdır ve birebir kopya çıkarır.
+2. Veri bütünlüğü korunur.
+
+**Dezavantajlar:**
+1. Donanım ve işletim sistemi bağımlıdır.
+2. Geri yükleme için ilgili araçlar (`mdb_copy`) gerekir.
