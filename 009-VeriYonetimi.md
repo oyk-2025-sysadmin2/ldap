@@ -63,7 +63,7 @@ uid: serif
 **Kullanıcı Ekleme Komutu(LDIF):**
 
 ```
-ldapadd -x -D "cn=Manager,dc=example,dc=com" -w secret -f ali.ldif
+ldapadd -x -D "cn=Manager,dc=example,dc=com" -w secret -f serif.ldif
 
 ```
 **E-posta güncelleme:**
