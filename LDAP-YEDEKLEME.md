@@ -33,7 +33,7 @@ slapcat -n 1 -l /backup/ldap_backup.ldif
 ## b) Fiziksel Yedekleme (Database File Copy / Binary)
 
 **Açıklama:**  
-LDAP’in kullandığı veritabanı dosyaları (ör. BerkeleyDB veya LMDB) doğrudan kopyalanır. Symas OpenLDAP için LMDB backend’de `mdb_copy` kullanımı önerilir.
+LDAP’in kullandığı veritabanı dosyaları doğrudan kopyalanır. Symas OpenLDAP için LMDB backend’de `mdb_copy` kullanımı önerilir.
 
 **Yöntem:**
 1. Servisi durdur
@@ -52,3 +52,16 @@ mdb_copy /var/symas/openldap-data/ /backup/ldap_backup/
 **Dezavantajlar:**
 1. Donanım ve işletim sistemi bağımlıdır.
 2. Geri yükleme için ilgili araçlar (`mdb_copy`) gerekir.
+
+## c) Anlık Görüntü (Snapshot) Yedekleme
+
+**Açıklama:**  
+Dosya sistemi veya sanallaştırma ortamında (LVM, ZFS, VMware vb.) **snapshot** alınarak yedekleme yapılır.
+
+**Avantajlar:**
+- Büyük kurumsal ortamlar için idealdir.
+- Çok hızlıdır, sistem kesintisi minimumdur.
+
+**Dezavantajlar:**
+- Ek altyapı ve depolama gerektirir.
+- Yedekler genellikle platforma bağımlıdır.
