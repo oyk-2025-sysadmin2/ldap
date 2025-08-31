@@ -18,4 +18,4 @@ bu kaydı sorgulayan bir sistem hem sertifikasını hem e-posta adresini bulabil
 
 - Printerlar için kullanıcılar sorgulayıp bağlanabilsin, kim ne kadar kullanıyor takip edilebilsin..
 - NFS üzerinden paylaşılan bir dizine LDAP sayesinde kullanıcı hangi istemciden login olursa olsun paylaştığı dizinine erişebilsin.
-- Özellikle büyük sunucularda Postfix, Sendmail, Dovecot gibi mail sunucuları kullanıcıları LDAP kullanılır,örneğin bir kullanıcıyı bu 3 sistem için tek tek oluşturmak yerine LDAP'ta bir kere tanımlamak.
+- Özellikle büyük sunucularda Postfix, Sendmail, Exim gibi mail sunucuları kullanıcıları LDAP kullanılır,örneğin bir kullanıcıyı bu 3 sistem için tek tek oluşturmak yerine LDAP'ta bir kere tanımlamak.
