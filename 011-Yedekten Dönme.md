@@ -6,11 +6,30 @@ LDAP veritabanını yedekten geri yüklemek için aşağıdaki adımlar izlenir.
 
 1. mdb ile:
 
+- LDAP servisini durdur (açıksa):
+```bash
+systemctl stop slapd.service
+```
 
+- Yedek dosyaları geri yükle:
+```bash
+mdb_copy /backup/ldap_backup/ /var/lib/ldap/
+```
+NOT: Bu, halihazırda var olan `/var/lib/ldap/*` dosyalarını temizleyecektir.
 
-2. slapcat yedeklemesi ile:
+- İzinleri düzelt:
+```
+sudo chown -R openldap:openldap /var/lib/ldap
+```
 
-- LDAP servisini durdur:
+- Servisi tekrar başlat:
+```bash
+systemctl start slapd.service
+```
+
+2. LDIF dosyanız varsa (`slapcat` metodu):
+
+- LDAP servisini durdur (açıksa):
 ```bash
 systemctl stop slapd.service
 ```
@@ -19,15 +38,16 @@ systemctl stop slapd.service
 ```bash
 rm -rf /var/lib/ldap/*
 ```
+Not: Ekstra önlem amacıyla dizini silmek yerine dizinin adını değiştirebilirsiniz. 
 
 - Yedek dosyaları geri yükle:
 ```bash
-slapadd -F /etc/ldap/slapd.d -b dc=example,dc=com -l /backup/ldap_backup.ldif
+slapadd -n 1 -l /backup/ldap_backup.ldif
 ```
 
 - İzinleri düzelt:
 ```
-chown -R openldap:openldap /etc/ldap/slapd.d/
+sudo chown -R openldap:openldap /var/lib/ldap
 ```
 
 - Servisi tekrar başlat:
