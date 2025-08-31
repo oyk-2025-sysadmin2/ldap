@@ -19,7 +19,7 @@ NOT: Bu, halihazırda var olan `/var/lib/ldap/*` dosyalarını temizleyecektir.
 
 - İzinleri düzelt:
 ```
-sudo chown -R openldap:openldap /var/lib/ldap
+chown -R openldap:openldap /var/lib/ldap
 ```
 
 - Servisi tekrar başlat:
@@ -47,7 +47,7 @@ slapadd -n 1 -l /backup/ldap_backup.ldif
 
 - İzinleri düzelt:
 ```
-sudo chown -R openldap:openldap /var/lib/ldap
+chown -R openldap:openldap /var/lib/ldap
 ```
 
 - Servisi tekrar başlat:

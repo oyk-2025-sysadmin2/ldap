@@ -66,6 +66,21 @@ uid: serif
 ldapadd -x -D "cn=Manager,dc=example,dc=com" -w secret -f ali.ldif
 
 ```
+**E-posta güncelleme:**
+
+``` dn: uid=ali,ou=users,dc=example,dc=com
+changetype: modify
+replace: mail
+mail: ali.vural@example.com
+```
+
+**Komut:**
+
+```
+ldapmodify -x -D "cn=Manager,dc=example,dc=com" -w secret -f modify.ldif
+
+
+```
 
 ------------------------------------------------------------------------
 
@@ -86,6 +101,7 @@ ldapsearch -x -b "dc=example,dc=com" "(mail=ali@example.com)"
 
 ## 4. Performans
 
+-   LDAP veritabanında performans, arama ve ekleme işlemlerinin hızlı olması anlamına gelir.
 -   Aramalarda hız için indeks kullanılır.
 
 **Örnek: `uid` alanını indeksleme (slapd.conf):**
@@ -96,8 +112,7 @@ ldapsearch -x -b "dc=example,dc=com" "(mail=ali@example.com)"
 
 ## 5. Güvenlik
 
--   Herkes her bilgiyi göremez.
--   Şifreler şifreli tutulur.
+-   LDAP güvenliği, verilerin yetkisiz kişilerce görülmesini veya değiştirilmesini engellemeye odaklanır.
 
 **Örnek ACL (cn=admin her şeyi görsün, kullanıcılar sadece kendi
 bilgilerini):**
@@ -111,7 +126,8 @@ bilgilerini):**
 
 ## 6. Yedekleme ve Kurtarma
 
--   `slapcat` ile yedek alınır.\
+-   LDAP veritabanı, kritik bilgiler içerir. Bu yüzden yedek almak ve gerektiğinde geri yüklemek çok önemlidir.
+-   `slapcat` ile yedek alınır.
 -   `slapadd` ile geri yüklenir.
 
 **Örnek Yedekleme:**
@@ -126,10 +142,18 @@ slapcat -l backup.ldif
 slapadd -l backup.ldif
 ```
 
+- Geri yükleme sonrası, veritabanını kontrol etmek için:
+```
+ldapsearch -x -b "dc=example,dc=com" "(objectClass=*)"
+
+```
+
 ------------------------------------------------------------------------
 
 ## 7. Temizlik ve Arşivleme
 
+-   Kullanılmayan veya eski kullanıcı hesapları devre dışı bırakılır veya silinir.
+-   Ama önce arşivleme yapılması önerilir, çünkü bilgiler geri alınabilir olmalı.
 -   Silinen kullanıcılar "çöp kutusu"na taşınabilir.
 
 **Örnek Silme:**
@@ -142,8 +166,8 @@ ldapdelete -x "uid=ayse,ou=users,dc=example,dc=com"
 
 ## 8. İzleme
 
--   Kim, neyi değiştirmiş → audit log
--   Performans ölçümü → monitoring
+-   LDAP sunucusu yaptığı tüm işlemleri log dosyalarına yazar.
+-   Loglar sayesinde kim neyi değiştirdi, hangi hatalar oluştu takip edilebilir.
 
 **Örnek LDAP sorgu sayısını log'dan kontrol et:**
 
@@ -155,17 +179,7 @@ tail -f /var/log/slapd.log
 
 ## 9. Büyük Sistemlerde Yönetim
 
+-   Büyük şirketlerde veya kurumlarda LDAP veritabanı çok fazla kullanıcı ve grup içerir. Bu durumda performans, güvenlik ve veri yönetimi stratejileri önem kazanır.
 -   Kullanıcı sayısı çok olursa veriler bölünür.
 -   Replikasyon ile yük dağıtılır.
-
-**Örnek Replikasyon Config (syncrepl):**
-
-    syncrepl rid=001
-      provider=ldap://ldap-master.example.com
-      type=refreshAndPersist
-      searchbase="dc=example,dc=com"
-      bindmethod=simple
-      binddn="cn=replicator,dc=example,dc=com"
-      credentials=secret
-
 
