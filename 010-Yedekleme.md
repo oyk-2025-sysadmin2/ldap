@@ -76,3 +76,7 @@ Dosya sistemi veya sanallaştırma ortamında (LVM, ZFS, VMware vb.) **snapshot*
 1. **Kritik sistemler** → Günlük yedek önerilir.
 2. **Orta ölçekli sistemler** → Haftalık tam yedek + günlük artımlı yedek.
 3. **Test ortamları** → Daha seyrek olabilir.
+
+
+## Kaynaklar 
+- https://kb.symas.com/maintenance/ldap-database-backup
