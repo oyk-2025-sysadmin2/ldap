@@ -1,13 +1,13 @@
 <img width="975" height="146" alt="image" src="https://github.com/user-attachments/assets/d8e1cd93-3cd6-486e-bbc0-aa24b2fbdf3e" />
 **1.adım: OpenLDAP kurulumu için sistem güncellenir ve paket kurulumları yapılır.**
 
-![[Pasted image 20250831115559.png]]
+![<img width="975" height="146" alt="image" src="https://github.com/user-attachments/assets/d8fdd577-9204-44fe-b232-b08df41c03ab" />]
 
 **Kurulumla birlikte slapd servisi ve kullanacağımız araçlar (ldapadd, ldapsearch, slappasswd vb.) gelir.**
 
 **2. adım: Slapd servisi başlatılır.**
 
-![<img width="975" height="146" alt="image" src="https://github.com/user-attachments/assets/a6589e74-6e8c-4284-8789-e220aef90df3" />]
+![Uploading image.png…]()
 
 **slapd, arka planda LDAP protokolünü (389/636 TCP portlarında) dinleyen servistir.**
 
