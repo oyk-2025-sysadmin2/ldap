@@ -22,14 +22,10 @@ LDAP verileri **LDIF (LDAP Data Interchange Format)** dosyasına aktarılır. İ
 ```bash
 slapcat -n 1 -l /backup/ldap_backup.ldif 
 ```
-Avantajlar:
+**Avantajlar:**
+- Platform bağımsızdır, farklı sistemlerde kullanılabilir.
+- `slapadd` ile kolayca geri yüklenebilir.
 
-Platform bağımsızdır, farklı sistemlerde kullanılabilir.
-
-slapadd ile kolayca geri yüklenebilir.
-
-Dezavantajlar:
-
-Büyük veritabanlarında yavaş çalışabilir.
-
-Canlı veritabanında bazı dinamik veriler dışlanabilir.
+**Dezavantajlar:**
+- Büyük veritabanlarında yavaş çalışabilir.
+- Canlı veritabanında bazı dinamik veriler dışlanabilir.
