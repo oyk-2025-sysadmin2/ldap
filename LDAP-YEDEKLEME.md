@@ -1,16 +1,16 @@
 #  LDAP YEDEKLEME (BACKUP)
 
-## LDAP Yedekleme Nedir?
+## 1. LDAP Yedekleme Nedir?
 
  LDAP (Lightweight Directory Access Protocol) dizin servisleri, kullanıcı hesapları, gruplar, erişim yetkileri gibi kritik verileri barındırır. Bu nedenle **yedekleme** veri kaybı durumlarında sistemi orijinal haline geri döndürebilmek için, sistem sürekliliği ve güvenliği açısından kritik öneme sahiptir. 
  
 
- ## Neden LDAP Yedeklemesi Gereklidir?
+ ## 2. Neden LDAP Yedeklemesi Gereklidir?
  - **Kullanıcı ve Kimlik Verileri** : LDAP, organizasyonun tüm kullanıcı hesapları, şifreleri, grup üyelikleri ve kimlik bilgilerini saklar. Bu veriler kaybolursa veya bozulursa, kullanıcılar sisteme erişemez ve sistemin çalışması durabilir.
  - **Teknik Arızalar** : Donanım arızası, veri bozulması veya yanlış yapılandırmalar durumunda yedekler, sistemin tekrar çalışmasını sağlar.
  - **İnsan Hataları** : Yanlışlıkla kullanıcı veya grup silme, hatalı konfigürasyon değişiklikleri veya yanlış komut çalıştırma gibi insan kaynaklı hatalara karşı yedekler, verilerin korunmasını ve sistemin geri yüklenmesini mümkün kılar.
 
- ## LDAP Yedekleme Yöntemleri 
+ ## 3. LDAP Yedekleme Yöntemleri 
 ## a) Mantıksal Yedekleme (LDIF Export)
 
 **Açıklama:**  
@@ -66,7 +66,7 @@ Dosya sistemi veya sanallaştırma ortamında (LVM, ZFS, VMware vb.) **snapshot*
 - Ek altyapı ve depolama gerektirir.
 - Yedekler genellikle platforma bağımlıdır.
 
-## 3. Yedekleme Sıklığı
+## 4. Yedekleme Sıklığı
 
 1. **Kritik sistemler** → Günlük yedek önerilir.
 2. **Orta ölçekli sistemler** → Haftalık tam yedek + günlük artımlı yedek.
