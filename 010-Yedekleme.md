@@ -14,7 +14,6 @@
 ## 3. LDAP Yedekleme Yöntemleri
 ### a) Mantıksal Yedekleme (LDIF Export)
 ### b) Fiziksel Yedekleme (Database File Copy / Binary)
-### c) Anlık Görüntü (Snapshot) Yedekleme
 
 ## a) Mantıksal Yedekleme (LDIF Export)
 
