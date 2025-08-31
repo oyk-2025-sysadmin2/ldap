@@ -5,7 +5,7 @@ Bir dizin hizmeti olan LDAP çok kullancılı sistemlerde bu kullanıcılara ön
 > kullanıcı, grup, cihaz bilgilerini hiyerarşik yapıda saklar.
 
 ```
-dc=example,dc=com                                --->   Organization kısmı 'dc= (domain component) veya o= (organization)'
+dc=example,dc=com                               --->   Organization kısmı 'dc= (domain component) veya o= (organization)'
  - ou=MDR Team Member                           --->   Organizational Unit alt grubu 
       - cn=Kerem Gül                            --->   Individuals  'cn= (common name)'
            - userCertificate;binary (X.509)     --->   Resources
