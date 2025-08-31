@@ -2,7 +2,7 @@
 
 
 
-#  Dizin Servisleri, Federasyon Yönetimi ve Kimlik Doğrulama Protokolleri
+#  Dizin Servisleri, Kimlik Yönetimi ve Kimlik Doğrulama Protokolleri
 
 # Kimlik Yönetimi Bileşenleri
 
