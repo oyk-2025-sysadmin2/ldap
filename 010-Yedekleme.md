@@ -38,7 +38,8 @@ slapcat -n 1 -l /backup/ldap_backup.ldif
 ## b) Fiziksel Yedekleme (Database File Copy / Binary)
 
 **Açıklama:**  
-LDAP’in kullandığı veritabanı dosyaları doğrudan kopyalanır. Symas OpenLDAP için LMDB backend’de `mdb_copy` kullanımı önerilir.
+LDAP verileri, kullandığı veritabanı dosyaları üzerinden doğrudan kopyalanarak yedeklenir.
+Eğer LDAP, LMDB veritabanı motorunu kullanıyorsa (güncel sistemlerde varsayılan), bu işlem için `mdb_copy` aracı önerilir.
 
 **Yöntem:**
 1. Servisi durdur
