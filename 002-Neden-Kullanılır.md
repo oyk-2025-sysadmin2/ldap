@@ -1,4 +1,4 @@
-## LDAP(Lightweight Directory Access Protocol)) neden kullanılır?
+## LDAP(Lightweight Directory Access Protocol) neden kullanılır?
 
 Bir dizin hizmeti olan LDAP çok kullancılı sistemlerde bu kullanıcılara önceden tanımlanmış şemaya uygun şekilde uzaktaki bir objeye erişmeyi kolay ve hızlı hale getirmek amacıyla geliştirilmiş bir protokoldür.
 > LDAP bir veritabanı veya uygulama da değildir.
