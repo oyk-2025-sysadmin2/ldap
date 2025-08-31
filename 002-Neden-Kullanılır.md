@@ -4,7 +4,7 @@ Bir dizin hizmeti olan LDAP çok kullancılı sistemlerde bu kullanıcılara ön
 > LDAP bir veritabanı veya uygulama da değildir.
 > kullanıcı, grup, cihaz bilgilerini hiyerarşik yapıda saklar.
 
-´´´
+bash´´´
 dc=example,dc=com                                 --->   Organization kısmı 'dc= (domain component) veya o= (organization)'
  └── ou=MDR Team Member                           --->   Organizational Unit alt grubu 
       └── cn=Kerem Gül                            --->   Individuals  'cn= (common name)'
