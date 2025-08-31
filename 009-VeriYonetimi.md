@@ -34,13 +34,13 @@ uid: serif
 dc=com
   └─ dc=example
         └─ ou=users
-              └─ uid=ali
+              └─ uid=serif
 ```
 - En üst seviye = domain (dc=com ve dc=example)
 
 - Alt birim = organizasyon birimi (ou=users)
 
-- Yaprak = kullanıcı veya grup entry’si (uid=ali)
+- Yaprak = kullanıcı veya grup entry’si (uid=serif)
 ------------------------------------------------------------------------
 
 ## 2. Kullanıcı Yaşam Döngüsü
