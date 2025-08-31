@@ -2,9 +2,9 @@
 
 LDAP veritabanını yedekten geri yüklemek için aşağıdaki adımlar izlenir. Bu işlem **veritabanını tamamen yedekten alır ve mevcut veriyi siler**, bu yüzden dikkatli olunmalıdır.
 
-### Adımlar
+## Adımlar
 
-1. mdb ile:
+### mdb ile:
 
 - LDAP servisini durdur (açıksa):
 ```bash
@@ -27,7 +27,7 @@ sudo chown -R openldap:openldap /var/lib/ldap
 systemctl start slapd.service
 ```
 
-2. LDIF dosyanız varsa (`slapcat` metodu):
+### LDIF dosyanız varsa (`slapcat` metodu):
 
 - LDAP servisini durdur (açıksa):
 ```bash
@@ -57,7 +57,7 @@ systemctl start slapd.service
 
 
 
-### Kaynaklar
+## Kaynaklar
 
 - https://documentation.ubuntu.com/server/how-to/openldap/backup-and-restore/
 - https://openldap.org/doc/admin25/maintenance.html
