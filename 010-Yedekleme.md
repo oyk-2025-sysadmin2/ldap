@@ -2,7 +2,7 @@
 
 ## 1. LDAP Yedekleme Nedir?
 
- LDAP (Lightweight Directory Access Protocol) dizin servisleri, kullanıcı hesapları, gruplar, erişim yetkileri gibi kritik verileri barındırır. Bu nedenle **yedekleme** veri kaybı durumlarında sistemi orijinal haline geri döndürebilmek için, sistem sürekliliği ve güvenliği açısından kritik öneme sahiptir. 
+ LDAP, kullanıcı hesapları, gruplar, erişim yetkileri gibi kritik verileri barındırır. Bu nedenle **yedekleme** veri kaybı durumlarında sistemi orijinal haline geri döndürebilmek için, sistem sürekliliği ve güvenliği açısından kritik öneme sahiptir. 
  
 
  ## 2. Neden LDAP Yedeklemesi Gereklidir?
