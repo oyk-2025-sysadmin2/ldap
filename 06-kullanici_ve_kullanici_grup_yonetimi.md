@@ -78,8 +78,6 @@ LDAP'i komut satırı ile yönetmek zor olabilir. Bu nedenle, kullanımı kolayl
 
 LDAP'ı komut satırı araçlarıyla kullanmak, hem otomasyon hem de hızlı işlemler için oldukça kullanışlıdır. En yaygın kullanılan araçlar `ldapadd`, `ldapmodify`, `ldapsearch` ve `ldapdelete`'dir. Bu araçlar, LDAP dizinine bağlanmak, bilgi eklemek, değiştirmek, aramak ve silmek için kullanılır.
 
-Aşağıda, bu araçları kullanarak kullanıcı ve grup yönetimi için yapabileceğin temel işlemleri anlattım.
-
 ---
 
 ### **1. Kullanıcı Ekleme (`ldapadd`)**
@@ -231,7 +229,7 @@ Bash
 ldapmodify -x -D "cn=admin,dc=example,dc=com" -W -f grup-uye-ekle.ldif
 ```
 
-Harika, görseli istediğin isimlerle güncelleyelim. İşte Kerem Güllü ve Morgan Bedavaadam isimleriyle yenilenmiş LDAP dizin yapısı şeması:
+Kerem Güllü ve Morgan Bedavaadam isimleriyle yenilenmiş LDAP dizin yapısı şeması:
 
 
 ```
