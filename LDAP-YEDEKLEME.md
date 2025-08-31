@@ -61,7 +61,7 @@ mdb_copy /var/symas/openldap-data/ /backup/ldap_backup/
 ## c) Anlık Görüntü (Snapshot) Yedekleme
 
 **Açıklama:**  
-Dosya sistemi veya sanallaştırma ortamında (LVM, ZFS, VMware vb.) **snapshot** alınarak yedekleme yapılır.
+Dosya sistemi veya sanallaştırma ortamında **snapshot** alınarak yedekleme yapılır.
 
 **Avantajlar:**
 - Büyük kurumsal ortamlar için idealdir.
