@@ -2,9 +2,9 @@
 
 
 
-# 🔐 Dizin Servisleri, Federasyon Yönetimi ve Kimlik Doğrulama Protokolleri
+#  Dizin Servisleri, Federasyon Yönetimi ve Kimlik Doğrulama Protokolleri
 
-# 🔐 Kimlik Yönetimi Bileşenleri
+# Kimlik Yönetimi Bileşenleri
 
 ## 1. LDAP Tabanlı Dizin Servisleri
 **Tanım:**  
@@ -66,14 +66,14 @@ Kimlik bilgilerini nasıl doğrulayacağımızı belirleyen iletişim kuralları
 
 ---
 
-## 📌 Özet – Farklar ve Benzerlikler
+##  Özet – Farklar ve Benzerlikler
 - **Dizin Servisi** = Kullanıcı bilgilerini depolar. *(Kim var?)*  
 - **Kimlik / Federasyon Yönetimi** = Kullanıcıların uygulamalara erişimini düzenler. *(Kim nereye girebilir?)*  
 - **Kimlik Doğrulama Protokolü** = Kullanıcının gerçekten o kişi olup olmadığını kanıtlar. *(Kim olduğunu nasıl kanıtlar?)*  
 
 Çoğu ortamda üçü birlikte çalışır:  
 
-👉 **Örnek: Microsoft Active Directory**  
+ **Örnek: Microsoft Active Directory**  
 - **Dizin servisi:** LDAP  
 - **Kimlik doğrulama:** Kerberos  
 - **Federasyon:** ADFS / Azure AD entegrasyonu  
