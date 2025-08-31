@@ -40,5 +40,21 @@ LDAP, **X.500** standartının internet için optimize edilmiş bir türevi olar
         
     -   Günümüzde neredeyse tüm uygulamalar **LDAP v3** kullanır.
 
+Bir araç satışı için "Tesla Model 3, siyah" arıyorsunuz.
+
+-   **Dizin Hizmeti = Araç Stok Alanı**
+    
+    -   Tüm araçlar (marka, model, renk) **stok alanına düzenli yerleştirilmiştir**.
+    -   Stok, **fiziksel veri deposudur** (dizin hizmeti gibi).
+    
+-   **LDAP = Satış Elemanının Tablet'i**
+    
+    -   Tablet'e "Tesla Model 3 siyah" yazdığında **stok konumunu gösterir** (örneğin, _Blok B, Sıra 4_).
+    -   Tablet, **stok verisine erişim protokolüdür** (LDAP gibi).
+
+#### **Neden Aynı Değil?**
+
+-   Stok **olmadan** tablet boş bilgi verir (araç yok).
+-   Tablet **olmadan** tüm blokları gezerek aramak zorunda kalırsınız (LDAP olmadan sorgu imkânsız).
 
    
