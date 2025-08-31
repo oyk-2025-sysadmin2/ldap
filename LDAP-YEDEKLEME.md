@@ -47,7 +47,7 @@ LDAP’in kullandığı veritabanı dosyaları doğrudan kopyalanır. Symas Open
 
 **LMDB Örnek Komut:**
 ```bash
-mdb_copy /var/symas/openldap-data/ /backup/ldap_backup/
+mdb_copy /var/lib/ldap/ /backup/ldap_backup/
 ```
 
 **Avantajlar:**
