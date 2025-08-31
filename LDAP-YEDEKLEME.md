@@ -65,3 +65,9 @@ Dosya sistemi veya sanallaştırma ortamında (LVM, ZFS, VMware vb.) **snapshot*
 **Dezavantajlar:**
 - Ek altyapı ve depolama gerektirir.
 - Yedekler genellikle platforma bağımlıdır.
+
+## 3. Yedekleme Sıklığı
+
+1. **Kritik sistemler** → Günlük yedek önerilir.
+2. **Orta ölçekli sistemler** → Haftalık tam yedek + günlük artımlı yedek.
+3. **Test ortamları** → Daha seyrek olabilir.
