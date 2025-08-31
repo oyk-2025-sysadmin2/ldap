@@ -33,9 +33,8 @@ OpenLDAP replikasyonunda üç ana kavram vardır: Master, Slave (Consumer) ve Mu
 
 Single-Master Replication: Tüm yazma işlemleri Master üzerinde
 Multi-Master Replication: Her node yazma/okuma yapabilir
-Mirror Mode Replication: İki node sürekli eşlenir, LB ile HA
+Mirror Mode Replication: İki node sürekli eşlenir
 
-![Single_Master_Replication.png](Picture3.jpg)
 
 ### Notes:
 OpenLDAP üç farklı model sunar:- Single-Master Replication: Basit, tek yazma noktası olan bir modeldir. Ancak master çökerse yazma işlemleri durur.- Multi-Master Replication: Tüm sunucular yazma yetkisine sahiptir. Çakışmaların yönetimi gerekir, ama yüksek erişilebilirlik sağlar.- Mirror Mode Replication: İki sunucu birbirinin yedeği olacak şekilde yapılandırılır. Genelde bir yük dengeleyici ile birlikte çalışır.Bu modellerden hangisinin seçileceği kurumun ihtiyaçlarına göre değişir.
@@ -71,7 +70,7 @@ LDAPS (636) kullanımı
 TLS sertifikaları
 Bind kullanıcıları ve şifre güvenliği
 
-![Guvenlik_Infografik.png](Picture4.jpg)
+![Guvenlik_Infografik.png](guvenlik.jpg)
 
 ### Notes:
 LDAP replikasyonunda güvenlik büyük önem taşır. Tüm replikasyon trafiği şifrelenmiş olmalıdır. Bunun için LDAPS (636 numaralı port) veya STARTTLS kullanılabilir. Ayrıca Master ve Consumer arasında kullanılan bind kullanıcılarının şifreleri güçlü olmalıdır. Sertifika altyapısı (CA) ile TLS güvenliği sağlandığında verilerin üçüncü kişiler tarafından dinlenmesi engellenir.
@@ -84,7 +83,7 @@ Bağlantı testleri
 Replikasyon gecikmeleri
 Çakışma yönetimi
 
-![Izleme_Infografik.png](Picture4.jpg)
+![Izleme_Infografik.png](izleme.jpg)
 
 ### Notes:
 Replikasyon yapılarında en sık karşılaşılan problemler bağlantı hataları, gecikmeler ve veri çakışmalarıdır. Bu sorunları tespit etmek için log dosyaları (örn. /var/log/slapd.log) takip edilmeli, ldapsearch ve benzeri araçlarla test yapılmalıdır. Ayrıca monitoring yazılımları (Nagios, Zabbix) ile LDAP sunucuları izlemek faydalıdır. Çakışma yönetiminde, hangi sunucunun değişikliğinin geçerli olacağı politikası önceden tanımlanmalıdır.
@@ -100,7 +99,7 @@ Fayda: Hızlı kimlik doğrulama, kampüs içi bağımsız çalışma, yedeklili
 Bir üniversitede on binlerce öğrenci ve personelin aynı anda farklı servisleri kullanması gerekir. Örneğin e-posta, kablosuz internet, LMS gibi sistemler LDAP üzerinden kimlik doğrulama yapar. Bu noktada merkezde bir Master sunucu, her kampüste Consumer sunucular kurularak sistem performanslı ve güvenli hale gelir. Öğrenciler kendi kampüslerindeki LDAP sunucusuna bağlanır, böylece ağ trafiği azalır ve sistem daha hızlı çalışır.
 
 <!-- Slide number: 10 -->
-# Use Case 2: Kurumsal Şirket (Multi-Site Yapı)
+# Use Case 2: Kurumsal Şirket (Multi-Site Yapı)
 
 Problem: Şirketin farklı şehirlerde ofisleri var
 Çözüm: Multi-Master OpenLDAP
@@ -110,7 +109,7 @@ Fayda: Kullanıcı yönetimi dağıtık yapılabiliyor, kullanıcı her ofiste a
 Birden fazla şehirde ofisi olan şirketlerde, kullanıcıların farklı lokasyonlarda aynı hesapla giriş yapabilmesi gerekir. Multi-Master replikasyon bu senaryo için idealdir. İstanbul ofisinde yapılan bir kullanıcı değişikliği, Ankara ve İzmir ofislerindeki LDAP sunucularına otomatik yansır. Böylece tüm kullanıcılar hangi şehirde olurlarsa olsunlar aynı kimlik bilgileriyle sorunsuz oturum açabilir. Bu yapı, dağıtık yönetim esnekliği de sağlar.
 
 <!-- Slide number: 11 -->
-# Use Case 3: Finans Kurumu (Yüksek Erişilebilirlik)
+# Use Case 3: Finans Kurumu (Yüksek Erişilebilirlik)
 
 Problem: VPN, e-posta gibi kritik servisler LDAP’a bağımlı
 Çözüm: Mirror Mode Replication + Load Balancer
@@ -126,7 +125,9 @@ Senaryoya uygun replikasyon modeli seçilmeli
 Performans ↔ Güvenlik dengesi gözetilmeli
 OpenLDAP, ölçeklenebilir ve esnek bir çözüm sunar
 
-![Sonuc_Infografik.png](Picture4.jpg)
+![Sonuc_Infografik.png](sonuc.jpg)
 
 ### Notes:
 Replikasyon modeli seçimi kurumun ölçeğine, kritik servislerine ve güvenlik ihtiyaçlarına göre yapılmalıdır. Küçük yapılarda Single-Master yeterli olabilirken, çok lokasyonlu yapılarda Multi-Master veya yüksek erişilebilirlik gerektiren yapılarda Mirror Mode daha uygun olur. OpenLDAP, açık kaynak yapısı sayesinde esnek ve güçlü bir çözüm sunar. Doğru planlama ve güvenlik tedbirleriyle uzun yıllar stabil çalışabilir.
+
+
