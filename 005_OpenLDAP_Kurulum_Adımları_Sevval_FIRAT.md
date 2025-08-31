@@ -1,6 +1,6 @@
 **1.adım: OpenLDAP kurulumu için sistem güncellenir ve paket kurulumları yapılır.**
 
-![<img width="975" height="146" alt="image" src="https://github.com/user-attachments/assets/d8fdd577-9204-44fe-b232-b08df41c03ab" />]
+<img width="975" height="146" alt="image" src="https://github.com/user-attachments/assets/d8fdd577-9204-44fe-b232-b08df41c03ab" />
 
 **Kurulumla birlikte slapd servisi ve kullanacağımız araçlar (ldapadd, ldapsearch, slappasswd vb.) gelir.**
 
