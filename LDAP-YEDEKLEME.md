@@ -10,7 +10,12 @@
  - **Teknik Arızalar** : Donanım arızası, veri bozulması veya yanlış yapılandırmalar durumunda yedekler, sistemin tekrar çalışmasını sağlar.
  - **İnsan Hataları** : Yanlışlıkla kullanıcı veya grup silme, hatalı konfigürasyon değişiklikleri veya yanlış komut çalıştırma gibi insan kaynaklı hatalara karşı yedekler, verilerin korunmasını ve sistemin geri yüklenmesini mümkün kılar.
 
- ## 3. LDAP Yedekleme Yöntemleri 
+
+## 3. LDAP Yedekleme Yöntemleri
+### a) Mantıksal Yedekleme (LDIF Export)
+### b) Fiziksel Yedekleme (Database File Copy / Binary)
+### c) Anlık Görüntü (Snapshot) Yedekleme
+
 ## a) Mantıksal Yedekleme (LDIF Export)
 
 **Açıklama:**  
