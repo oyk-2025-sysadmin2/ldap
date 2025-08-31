@@ -99,7 +99,7 @@ Fayda: Hızlı kimlik doğrulama, kampüs içi bağımsız çalışma, yedeklili
 Bir üniversitede on binlerce öğrenci ve personelin aynı anda farklı servisleri kullanması gerekir. Örneğin e-posta, kablosuz internet, LMS gibi sistemler LDAP üzerinden kimlik doğrulama yapar. Bu noktada merkezde bir Master sunucu, her kampüste Consumer sunucular kurularak sistem performanslı ve güvenli hale gelir. Öğrenciler kendi kampüslerindeki LDAP sunucusuna bağlanır, böylece ağ trafiği azalır ve sistem daha hızlı çalışır.
 
 <!-- Slide number: 10 -->
-# Use Case 2: Kurumsal Şirket (Multi-Site Yapı)
+# Use Case 2: Kurumsal Şirket (Multi-Site Yapı)
 
 Problem: Şirketin farklı şehirlerde ofisleri var
 Çözüm: Multi-Master OpenLDAP
@@ -109,7 +109,7 @@ Fayda: Kullanıcı yönetimi dağıtık yapılabiliyor, kullanıcı her ofiste a
 Birden fazla şehirde ofisi olan şirketlerde, kullanıcıların farklı lokasyonlarda aynı hesapla giriş yapabilmesi gerekir. Multi-Master replikasyon bu senaryo için idealdir. İstanbul ofisinde yapılan bir kullanıcı değişikliği, Ankara ve İzmir ofislerindeki LDAP sunucularına otomatik yansır. Böylece tüm kullanıcılar hangi şehirde olurlarsa olsunlar aynı kimlik bilgileriyle sorunsuz oturum açabilir. Bu yapı, dağıtık yönetim esnekliği de sağlar.
 
 <!-- Slide number: 11 -->
-# Use Case 3: Finans Kurumu (Yüksek Erişilebilirlik)
+# Use Case 3: Finans Kurumu (Yüksek Erişilebilirlik)
 
 Problem: VPN, e-posta gibi kritik servisler LDAP’a bağımlı
 Çözüm: Mirror Mode Replication + Load Balancer
@@ -129,4 +129,5 @@ OpenLDAP, ölçeklenebilir ve esnek bir çözüm sunar
 
 ### Notes:
 Replikasyon modeli seçimi kurumun ölçeğine, kritik servislerine ve güvenlik ihtiyaçlarına göre yapılmalıdır. Küçük yapılarda Single-Master yeterli olabilirken, çok lokasyonlu yapılarda Multi-Master veya yüksek erişilebilirlik gerektiren yapılarda Mirror Mode daha uygun olur. OpenLDAP, açık kaynak yapısı sayesinde esnek ve güçlü bir çözüm sunar. Doğru planlama ve güvenlik tedbirleriyle uzun yıllar stabil çalışabilir.
+
 
