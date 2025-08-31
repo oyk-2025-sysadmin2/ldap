@@ -58,18 +58,6 @@ mdb_copy /var/lib/ldap/ /backup/ldap_backup/
 1. Donanım ve işletim sistemi bağımlıdır.
 2. Geri yükleme için ilgili araçlar (`mdb_copy`) gerekir.
 
-## c) Anlık Görüntü (Snapshot) Yedekleme
-
-**Açıklama:**  
-Dosya sistemi veya sanallaştırma ortamında **snapshot** alınarak yedekleme yapılır.
-
-**Avantajlar:**
-- Büyük kurumsal ortamlar için idealdir.
-- Çok hızlıdır, sistem kesintisi minimumdur.
-
-**Dezavantajlar:**
-- Ek altyapı ve depolama gerektirir.
-- Yedekler genellikle platforma bağımlıdır.
 
 ## 4. Yedekleme Sıklığı
 
