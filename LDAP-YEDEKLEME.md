@@ -11,6 +11,25 @@
  - **İnsan Hataları** : Yanlışlıkla kullanıcı veya grup silme, hatalı konfigürasyon değişiklikleri veya yanlış komut çalıştırma gibi insan kaynaklı hatalara karşı yedekler, verilerin korunmasını ve sistemin geri yüklenmesini mümkün kılar.
 
  ## LDAP Yedekleme Yöntemleri 
- a) Mantıksal Yedekleme(LDIF Export)
- LDAP verileri LDIF(LDAP Data Interchange Format) dosyasına aktarılır. İnsan tarafından okunabilir ve taşınabilir bir format sağlar. 
-**Kullanılan Araç** : slapcat
+## a) Mantıksal Yedekleme (LDIF Export)
+
+**Açıklama:**  
+LDAP verileri **LDIF (LDAP Data Interchange Format)** dosyasına aktarılır. İnsan tarafından okunabilir ve taşınabilir bir format sağlar.
+
+**Araç:** `slapcat`
+
+**Örnek Komut:**
+```bash
+slapcat -n 1 -l /backup/ldap_backup.ldif 
+```
+Avantajlar:
+
+Platform bağımsızdır, farklı sistemlerde kullanılabilir.
+
+slapadd ile kolayca geri yüklenebilir.
+
+Dezavantajlar:
+
+Büyük veritabanlarında yavaş çalışabilir.
+
+Canlı veritabanında bazı dinamik veriler dışlanabilir.
