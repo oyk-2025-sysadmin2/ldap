@@ -7,20 +7,6 @@ created: 2025-08-31T10:55:35+03
 
 - Ağaç Yapısı, verilerin hiyerarşik olarak organize edilmesi için kullanılan bir yapıdır. Gerçek hayattaki gibi ağacın dallanma mantığına benzer şekilde üstten alta doğru genişleyen mantıksal yapıyı temsil eder.
 
-## LDAP'ta Ağaç Yapısı ve Bazı Temel Bileşenleri
-
-- LDAP verileri, hiyerarşik düzeni oluşturulan nesnelerin içerdikleri farklı nitelikler sayesinde sağlanmaktadır. Gerçek hayatta ağaçtaki bileşenleri; ağaçtan köke, kökten gövdeye, gövdeden dallara, dallardan yapraklara gibi bir sıralamayla tümden parçaya doğru sıralarız.
-
-| LDAP Niteligi     | Nitelik Kodu | Nitelik Aciklamasi       |
-| ----------------- | ------------ | ------------------------ |
-| Country           | c            | Ülke                     |
-| State             | st           | İl/Eyalet                |
-| Domain Component  | dc           | Etki Alanı Öğesi         |
-| Organization      | o            | Organizasyon Adı         |
-| Organization Unit | ou           | Organizasyon Ünitesi Adı |
-| Common Name       | cn           | Ortak İsim               |
-| UserID            | uid          | Kullanıcı ID'si          |
-
 ## Örnek Bir Ağaç Yapısı
 
 ```mermaid
@@ -37,6 +23,18 @@ subgraph B1[Bolu Yaz Kampı]
  B13[GNU/Linux Sistem Yönetimi 2. Düzey] --> X3[Ahmetcan İrdem]
 end
 ```
+
+## LDAP'ta Ağaç Yapısı ve Bazı Temel Bileşenleri
+
+| LDAP Niteligi     | Nitelik Kodu | Nitelik Aciklamasi       |
+| ----------------- | ------------ | ------------------------ |
+| Country           | c            | Ülke                     |
+| State             | st           | İl/Eyalet                |
+| Domain Component  | dc           | Etki Alanı Öğesi         |
+| Organization      | o            | Organizasyon Adı         |
+| Organization Unit | ou           | Organizasyon Ünitesi Adı |
+| Common Name       | cn           | Ortak İsim               |
+| UserID            | uid          | Kullanıcı ID'si          |
 
 ## Örnek Ağaç Yapısının LDAP'ta Gösterimi
 
